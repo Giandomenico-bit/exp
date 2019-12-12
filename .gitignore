@@ -4,6 +4,7 @@
 # Object files
 *.o
 fattoriale
+nepero
 
 # Linker output
 *.ilk
