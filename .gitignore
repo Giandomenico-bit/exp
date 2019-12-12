@@ -5,6 +5,7 @@
 *.o
 fattoriale
 nepero
+exp
 
 # Linker output
 *.ilk
