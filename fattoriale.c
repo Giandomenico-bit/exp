@@ -26,16 +26,14 @@ int main( void ){
   int numero;
   int fattoriale = 1;
 
-do{
-
-  printf( "Inserisci un numero intero non negativo : " );
+do {
+  printf( "%s", "Inserisci un numero intero non negativo : " );
   scanf( "%d", &numero );
 
 } while( numero < 0 );
 
-  for( int i = 1; i <= numero; i++ ){
-    fattoriale = fattoriale * i;
-  }
+  for( int i = 1; i <= numero; i++ )
+       fattoriale = fattoriale * i;
 
   printf( "%d! = %d\n", numero, fattoriale );
 
