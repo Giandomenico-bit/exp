@@ -33,7 +33,7 @@ int main( void ){
   fact = 1;
   count = 0;
 
-  for( termine = 1; termine < 10; termine++ ) {
+  for( termine = 1; ; termine++ ) {
        fact = fact * termine;
        e = e + 1.0 / ( float )fact; // calcolo la costante e
 
