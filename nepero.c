@@ -1,6 +1,6 @@
 /* Nepero
 Si scriva un programma C che approssimi il valore
-della costante e (numeroero di Nepero) mediante la formula:
+della costante e (termineAggiuntoero di Nepero) mediante la formula:
 
 e = 1 + 1/1! + 1/2! + 1/3! + ...
 Si effettui due volte il calcolo. Nel primo caso
@@ -17,7 +17,7 @@ Quanti termini sono necessari?
 int main( void ){
 
   int termine, fact, count, cifra;
-  float e, numero;
+  float e, termineAggiunto;
 
   fact = 1;
   e = 0.0;
@@ -37,8 +37,8 @@ int main( void ){
        fact = fact * termine;
        e = e + 1.0 / ( float )fact; // calcolo la costante e
 
-       numero = 1.0 / ( float )fact; // termine aggiunto
-       cifra = numero * 1000; // mi sposto di 3 posizioni
+       termineAggiunto = 1.0 / ( float )fact; // termine aggiunto
+       cifra = termineAggiunto * 1000; // mi sposto di 3 posizioni
        cifra = cifra % 10; // calcola la terza cifra decimale
 
        if( termine > 2 && cifra == 0 )
