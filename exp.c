@@ -15,19 +15,22 @@ mediante la funzione exp() della libreria matematica.
 
 int main( void ){
 
-  double expt = 1.0, esponente;
-  int i, fact = 1;
+  float expt, esponente;
+  int termine, fact;
 
-  printf( "Inserisci esponente : " );
-  scanf( "%lf", &esponente );
+  expt = 1.;
+  fact = 1;
 
-  for( i = 1; i <= 10; i++ ){
-    fact = fact * i;
-    expt = expt + ( pow( esponente, i ) / ( double )fact );
+  printf( "%s", "Inserisci esponente : " );
+  scanf( "%f", &esponente );
+
+  for( termine = 1; termine <= 10; termine++ ){
+      fact = fact * termine;
+      expt = expt + ( pow( esponente, termine ) / ( float )fact );
   }
 
-  printf( "exp = %lf\n", expt );
-  printf( "%lf\n", exp( esponente ) );
+  printf( "exp = %f\n", expt );
+  printf( "%f\n", exp( esponente ) );
 
   return 0;
 }
