@@ -31,8 +31,8 @@ int main( void ){
       potenza = potenza * esponente;
   }
 
-  printf( "exp = %f\n", esponenziale );
-  printf( "%f\n", exp( esponente ) );
+  printf( "exp1 = %f\n", esponenziale );
+  printf( "exp2 = %f\n", exp( esponente ) );
 
   return 0;
 }
