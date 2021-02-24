@@ -32,8 +32,9 @@ do {
 } while( numero < 0 );
 
   fattoriale = 1;
-  for( i = 1; i <= numero; i++ )
-       fattoriale = fattoriale * i;
+  for( i = 1; i <= numero; i++ ) {
+      fattoriale = fattoriale * i;
+  }
 
   printf( "%d! = %d\n", numero, fattoriale );
 
