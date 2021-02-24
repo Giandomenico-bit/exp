@@ -15,10 +15,10 @@ mediante la funzione exp() della libreria matematica.
 
 int main( void ){
 
-  float expt, esponente;
+  double expt, esponente;
   int termine, fact;
 
-  expt = 1.;
+  expt = 1.0;
   fact = 1;
 
   printf( "%s", "Inserisci esponente : " );
@@ -26,7 +26,7 @@ int main( void ){
 
   for( termine = 1; termine <= 10; termine++ ){
       fact = fact * termine;
-      expt = expt + ( pow( esponente, termine ) / ( float )fact );
+      expt = expt + ( pow( esponente, termine ) / ( double )fact );
   }
 
   printf( "exp = %f\n", expt );
