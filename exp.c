@@ -15,11 +15,11 @@ mediante la funzione exp() della libreria matematica.
 
 int main( void ){
 
-  int termine, fattoriale, potenza, esponente;
-  double esponenziale;
+  int termine, fattoriale;
+  double esponenziale, esponente, potenza;
 
   printf( "%s", "Inserisci esponente : " );
-  scanf( "%d", &esponente );
+  scanf( "%lf", &esponente );
 
   esponenziale = 1.0;
   fattoriale = 1;
