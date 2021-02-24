@@ -25,11 +25,11 @@ int main( void ){
 
   int numero, fattoriale, i;
 
-do {
-  printf( "%s", "Inserisci un numero intero non negativo : " );
-  scanf( "%d", &numero );
+  do {
+    printf( "%s", "Inserisci un numero intero non negativo : " );
+    scanf( "%d", &numero );
 
-} while( numero < 0 );
+  } while( numero < 0 );
 
   fattoriale = 1;
   for( i = 1; i <= numero; i++ ) {
