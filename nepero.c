@@ -16,8 +16,8 @@ Quanti termini sono necessari?
 
 int main( void ){
 
-  int termine, fattoriale, terzaCifra;
-  double costanteE;
+  int termine, fattoriale;
+  double costanteE, costantePrec, costanteSucc;
 
   fattoriale = 1;
   costanteE = 0.0;
@@ -28,13 +28,15 @@ int main( void ){
   }
 
   fattoriale = termine = 1;
+  costanteSucc = costanteE;
 
   do {
+      costantePrec = costanteSucc;
       fattoriale = fattoriale * termine;
-      terzaCifra = ( 1.0 / ( double )fattoriale ) * 1000;
+      costanteSucc = costanteSucc + 1.0 / ( double )fattoriale;
       termine++;
 
-  } while( terzaCifra != 0 );
+  } while( costanteSucc - costantePrec > 0.001  );
 
   printf( "e = %f\n", costanteE );
   printf( "Sono necessari %d passaggi\n", termine - 1 );
