@@ -16,37 +16,28 @@ Quanti termini sono necessari?
 
 int main( void ){
 
-  int termine, fact, count, cifra;
-  float e, termineAggiunto;
+  int termine, fattoriale, terzaCifra;
+  double costanteE;
 
-  fact = 1;
-  e = 0.0;
+  fattoriale = 1;
+  costanteE = 0.0;
 
   for( termine = 1; termine <= 10; termine++ ) {
-       fact = fact * termine;
-       e = e + 1.0 / ( float )fact;
+       fattoriale = fattoriale * termine;
+       costanteE = costanteE + 1.0 / ( double )fattoriale;
   }
 
-  printf( "e = %f\n", e );
+  fattoriale = termine = 1;
 
-  e = 0.0;
-  fact = 1;
-  count = 0;
+  do {
+      fattoriale = fattoriale * termine;
+      terzaCifra = ( 1.0 / ( double )fattoriale ) * 1000;
+      termine++;
 
-  for( termine = 1; ; termine++ ) {
-       fact = fact * termine;
-       e = e + 1.0 / ( float )fact; // calcolo la costante e
+  } while( terzaCifra != 0 );
 
-       termineAggiunto = 1.0 / ( float )fact; // termine aggiunto
-       cifra = termineAggiunto * 1000; // mi sposto di 3 posizioni
-       cifra = cifra % 10; // calcola la terza cifra decimale
-
-       if( termine > 2 && cifra == 0 )
-            break;
-       count = count + 1;
-  }
-
-  printf( "Sono necessari %d termini\n", count + 1 );
+  printf( "e = %f\n", costanteE );
+  printf( "Sono necessari %d passaggi\n", termine - 1 );
 
   return 0;
 }
