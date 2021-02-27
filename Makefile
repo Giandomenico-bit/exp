@@ -1,3 +1,2 @@
-CFLAGS=-Wall -pedantic -std=c11
-LDLIBS=-lm
+CFLAGS=-Wall -pedantic -std=C99
 CC=gcc
